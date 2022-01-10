@@ -26,8 +26,8 @@
   <widget class="QPushButton" name="pbCoin500">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>210</y>
+     <x>180</x>
+     <y>180</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -39,8 +39,8 @@
   <widget class="QPushButton" name="pbCoin100">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>270</y>
+     <x>180</x>
+     <y>240</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -52,8 +52,8 @@
   <widget class="QPushButton" name="pbCoin50">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>330</y>
+     <x>180</x>
+     <y>300</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -65,8 +65,8 @@
   <widget class="QPushButton" name="pbCoin10">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>390</y>
+     <x>180</x>
+     <y>360</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -78,8 +78,8 @@
   <widget class="QPushButton" name="pbCoffee">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>210</y>
+     <x>420</x>
+     <y>180</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -91,8 +91,8 @@
   <widget class="QPushButton" name="pbMilk">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>330</y>
+     <x>420</x>
+     <y>300</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -104,14 +104,27 @@
   <widget class="QPushButton" name="pbTea">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>270</y>
+     <x>420</x>
+     <y>240</y>
      <width>131</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
     <string>Tea(150)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbReset">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>430</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reset</string>
    </property>
   </widget>
  </widget>

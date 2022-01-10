@@ -1,5 +1,6 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include <QMessageBox>
 
 
 Widget::Widget(QWidget *parent)
@@ -65,5 +66,35 @@ void Widget::on_pbTea_clicked()
 void Widget::on_pbMilk_clicked()
 {
     changeMoney(-100);
+}
+
+
+void Widget::on_pbReset_clicked()
+{
+    int coin500 = 0;
+    int coin100 = 0;
+    int coin50 = 0;
+    int coin10 = 0;
+
+    coin500 = money/500;
+    money %= 500;
+    coin100 = money/100;
+    money %= 100;
+    coin50 = money/50;
+    money %= 50;
+    coin10 = money/10;
+    money %= 10;
+
+    QString msg;
+    msg = "500원"+ QString::number(coin500) + "개,";
+    msg += "100원 "+ QString::number(coin100) + "개,";
+    msg += "50원 "+ QString::number(coin50) + "개,";
+    msg += "10원 "+ QString::number(coin10) + "개";
+
+    QMessageBox msgBox;
+    msgBox.setText(msg);
+    msgBox.exec();
+
+
 }
 
