@@ -86,15 +86,16 @@ void Widget::on_pbReset_clicked()
     money %= 10;
 
     QString msg;
-    msg = "500원"+ QString::number(coin500) + "개,";
-    msg += "100원 "+ QString::number(coin100) + "개,";
-    msg += "50원 "+ QString::number(coin50) + "개,";
+    msg = "500원 "+ QString::number(coin500) + "개, ";
+    msg += "100원 "+ QString::number(coin100) + "개, ";
+    msg += "50원 "+ QString::number(coin50) + "개, ";
     msg += "10원 "+ QString::number(coin10) + "개";
 
     QMessageBox msgBox;
     msgBox.setText(msg);
     msgBox.exec();
 
+    changeMoney(0); // return
 
 }
 
