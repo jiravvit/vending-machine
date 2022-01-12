@@ -71,31 +71,25 @@ void Widget::on_pbMilk_clicked()
 
 void Widget::on_pbReset_clicked()
 {
-    int coin500 = 0;
-    int coin100 = 0;
-    int coin50 = 0;
-    int coin10 = 0;
+    int coin[] = {500, 100, 50, 10};
+    int size = sizeof(coin)/sizeof(int);
+    int remain = 0;
+    QString msg = "";
 
-    coin500 = money/500;
-    money %= 500;
-    coin100 = money/100;
-    money %= 100;
-    coin50 = money/50;
-    money %= 50;
-    coin10 = money/10;
-    money %= 10;
+    for(int i = 0; i < size; i++)
+    {
+        remain = int(money/coin[i]);
+        if(remain > 0)
+        {
+            money %= coin[i];
+            msg += QString::number(coin[i]) + "원 "+ QString::number(remain) + "개\n";
+        }
+    }
 
-    QString msg;
-    msg = "500원 "+ QString::number(coin500) + "개, ";
-    msg += "100원 "+ QString::number(coin100) + "개, ";
-    msg += "50원 "+ QString::number(coin50) + "개, ";
-    msg += "10원 "+ QString::number(coin10) + "개";
-
+    changeMoney(0);
     QMessageBox msgBox;
     msgBox.setText(msg);
-    msgBox.exec();
-
-    changeMoney(0); // return
-
+    msgBox.exec(); // dialog
+    // no play
 }
 
